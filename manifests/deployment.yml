@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "kubernetservicetest-18e2"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "kubernetservicetest-18e2"
+  template:
+    metadata:
+      labels:
+        app: "kubernetservicetest-18e2"
+    spec:
+      containers:
+        - name: "kubernetservicetest-18e2"
+          image: "container000.azurecr.io/kubernetservicetest"
+          ports:
+          - containerPort: 443
