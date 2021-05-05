@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "kubernetservicetest-18e2"
+    labels:
+        app: "kubernetservicetest-18e2"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: kubernetservicetesta914-kubernetservicetest-18e2.525eb536fc204922bf2f.eastus.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "kubernetservicetest-18e2"
+                servicePort: 443
