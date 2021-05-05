@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "kubernetservicetest-18e2"
+    labels:
+        app: "kubernetservicetest-18e2"
+spec:
+    type: ClusterIP
+    ports:
+    - port: 443
+      targetPort: 443
+      protocol: TCP
+      name: http
+    selector:
+        app: "kubernetservicetest-18e2"
